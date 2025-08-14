@@ -1,0 +1,16 @@
+.hero{
+clip-path: xywh(0 90px 100% 75% round 15% 0);
+}
+
+@media (max-width: 640px){
+
+    .hero{
+clip-path: none;
+
+}
+}
+
+#menu {
+  transition: all 0.3s ease-in-out;
+}
+

@@ -1,0 +1,21 @@
+{% block main %}
+
+<div class="container-fluid">
+    <form action="{{ url_for('delete', delete_task) }}" method="post">
+        {{ form.hidden_tag() }}
+        {{ form.csrf_token() }}
+        <p>Are you sure you want to delete?</p>
+        <div class="row">
+            <div class="col">
+                <p>{{ title }}</p>
+            </div>
+            <div class="col">
+                {{ form.submit(class="btn btn-danger") }}
+                <a href="{{ url_for('index')}}" class="btn btn-primary">Cancel</a>
+            </div>
+        </div>
+    </form>
+
+</div>
+
+{% endblock%}
